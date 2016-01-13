@@ -31,7 +31,7 @@ Source: [Software Componentization](http://blogs.windriver.com/koning/2006/09/co
 -   "it's a library, not a framework"
     -   emphasis on interoperability: integrating Polymer with other frameworks should be doable
 
-<f4a5ba7a0008046ec8b7#file-layers-of-polymer-png>
+![img](images/layers-of-polymer.png)
 
 # Intro to Web Components
 
@@ -138,7 +138,7 @@ Example:
     root.textContent = 'こんにちは、影の世界!';
     </script>
 
-<f4a5ba7a0008046ec8b7#file-shadow-root-png>
+![img](images/shadow-root.png)
 
 **Benefits**
 
@@ -282,7 +282,7 @@ warnings.html:
 
 <http://jonrimmer.github.io/are-we-componentized-yet/>
 
-<f4a5ba7a0008046ec8b7#file-are-we-componentized-yet-png>
+![img](images/are-we-componentized-yet.png)
 
 Note:
 
