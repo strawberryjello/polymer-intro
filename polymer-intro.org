@@ -24,7 +24,7 @@ Source: [[http://blogs.windriver.com/koning/2006/09/components.html][Software Co
 - "it's a library, not a framework"
   - emphasis on interoperability: integrating Polymer with other frameworks should be doable
 
-[[file:f4a5ba7a0008046ec8b7#file-layers-of-polymer-png]]
+[[file:images/layers-of-polymer.png]]
 
 * Intro to Web Components
 ** The components
@@ -129,7 +129,7 @@ root.textContent = 'こんにちは、影の世界!';
 </script>
 #+END_SRC
 
-[[file:f4a5ba7a0008046ec8b7#file-shadow-root-png]]
+[[file:images/shadow-root.png]]
 
 *Benefits*
 - DOM/CSS "scoping"/protection (prevents CSS from leaking into a custom element)
@@ -270,7 +270,7 @@ warnings.html:
 ** Browser support
 http://jonrimmer.github.io/are-we-componentized-yet/
 
-[[file:f4a5ba7a0008046ec8b7#file-are-we-componentized-yet-png]]
+[[file:images/are-we-componentized-yet.png]]
 
 Note:
 - Mozilla no longer supports HTML imports because of ES6 (see [[https://hacks.mozilla.org/2014/12/mozilla-and-web-components/][Mozilla and Web Components: Update]], 15 Dec 2014)
