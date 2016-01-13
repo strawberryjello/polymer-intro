@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="../../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <script src="../../bower_components/web-component-tester/browser.js"></script>
+
+    <!-- Import the element to test -->
+    <link rel="import" href="../elements/hello-world.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <hello-world></hello-world>
+      </template>
+    </test-fixture>
+
+    <script>
+
+      suite('hello-world tests', function() {
+        var hello, header;
+
+        setup(function() {
+          hello = fixture('basic');
+        });
+
+        test('Hello world', function() {
+          header = hello.querySelector('p');
+          assert.equal(header.textContent, 'Hello world');
+        });
+
+      });
+    </script>
+  </body>
+</html>

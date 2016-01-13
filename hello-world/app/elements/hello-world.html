@@ -1,0 +1,26 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="hello-world">
+  <template>
+    <style>
+     p {
+       font-family: Arial, sans-serif;
+     }
+    </style>
+    <p>{{text}}</p>
+  </template>
+  <script>
+   (function() {
+     Polymer({
+       is: 'hello-world',
+
+       properties: {
+         text: {
+           type: String,
+           value: 'Hello world'
+         }
+       }
+     });
+   })();
+  </script>
+</dom-module>
