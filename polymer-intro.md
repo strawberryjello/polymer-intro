@@ -1,4 +1,4 @@
-# DONE? Overview
+# Overview
 
 ## Componentization for the web
 
@@ -33,11 +33,11 @@ Source: [Software Componentization](http://blogs.windriver.com/koning/2006/09/co
 
 <f4a5ba7a0008046ec8b7#file-layers-of-polymer-png>
 
-# NEARLYTHERE Intro to Web Components
+# Intro to Web Components
 
-## NEARLYTHERE The components
+## The components
 
-### DONE? Custom Elements
+### Custom Elements
 
 <http://w3c.github.io/webcomponents/spec/custom/>
 
@@ -93,7 +93,7 @@ Note:
 -   detachedCallback
 -   attributeChangedCallback(attribute, oldVal, newVal)
 
-### DONE? Templates
+### Templates
 
 <http://www.w3.org/TR/html5/scripting-1.html#the-template-element>
 
@@ -122,7 +122,7 @@ Example:
 -   no way to prerender a template (cannot preload assets, process JS, download initial CSS, etc.)
 -   be careful with nested templates: nested templates require that their children also be manually activated
 
-### DONE? Shadow DOM
+### Shadow DOM
 
 <http://w3c.github.io/webcomponents/spec/shadow/>
 
@@ -197,7 +197,7 @@ Example:
 -   multiple shadow roots for a host
 -   nested shadow roots
 
-### NEARLYTHERE HTML Imports
+### HTML Imports
 
 <http://w3c.github.io/webcomponents/spec/imports/>
 
@@ -278,7 +278,7 @@ warnings.html:
 -   scripts in an import are processed in order, but do not block the main document parsing
 -   scripts execute at import time, stylesheets, markup, and other resources need to be added to the main page explicitly
 
-## DONE? Browser support
+## Browser support
 
 <http://jonrimmer.github.io/are-we-componentized-yet/>
 
@@ -288,7 +288,7 @@ Note:
 
 -   Mozilla no longer supports HTML imports because of ES6 (see [Mozilla and Web Components: Update](https://hacks.mozilla.org/2014/12/mozilla-and-web-components/), 15 Dec 2014)
 
-## DONE? Polyfills
+## Polyfills
 
 -   polyfill: downloadable code that implements features not yet supported natively by a browser
 -   for browsers that don't support certain web components, the ff. are available via [webcomponents.js](https://github.com/WebComponents/webcomponentsjs):
@@ -298,9 +298,9 @@ Note:
     -   also includes MutationObserver and WeakMap
 -   [webcomponents-lite.js](https://github.com/webcomponents/webcomponentsjs/blob/master/webcomponents-lite.js) excludes Shadow DOM
 
-# NEARLYTHERE Intro to Polymer
+# Intro to Polymer
 
-## DONE? Setup requirements
+## Setup requirements
 
 -   Installation instructions
     -   [Full Polymer library](https://www.polymer-project.org/1.0/docs/start/getting-the-code.html)
@@ -309,7 +309,7 @@ Note:
 -   Or download the zip archive
     -   updating the dependencies/adding new elements requires downloading a new zip archive unless you convert to Bower
 
-## DONE? Shady DOM
+## Shady DOM
 
 Shady DOM vs shadow DOM polyfill
 
@@ -326,7 +326,7 @@ Shady DOM is compatible with shadow DOM
 
 Source: [What is shady DOM?](https://www.polymer-project.org/1.0/articles/shadydom.html)
 
-## DONE? Vulcanize
+## Vulcanize
 
 <https://github.com/Polymer/vulcanize>
 
@@ -334,7 +334,7 @@ Source: [What is shady DOM?](https://www.polymer-project.org/1.0/articles/shadyd
 -   Vulcanize reduces an HTML file and its dependent HTML Imports into one file
 -   in the future, technologies such as [HTTP/2](http://en.wikipedia.org/wiki/HTTP/2) and [Server Push](https://http2.github.io/faq/#whats-the-benefit-of-server-push) will likely obsolete the need for a tool like Vulcanize for production uses
 
-## STARTED Web Component Tester
+## Web Component Tester
 
 <https://github.com/Polymer/web-component-tester>
 
@@ -342,11 +342,11 @@ Source: [What is shady DOM?](https://www.polymer-project.org/1.0/articles/shadyd
 -   WCT will run your tests against whatever browsers you have locally installed, or remotely via Sauce Labs
 -   test suites in HTML or JS files
 
-## NEARLYTHERE Features
+## Features
 
 Source: [dev guide feature overview](https://www.polymer-project.org/1.0/docs/devguide/feature-overview.html)
 
-### DONE? Registration and lifecycle
+### Registration and lifecycle
 
 -   Registering an element associates a class (prototype) with a custom element name
 
@@ -380,7 +380,7 @@ Example:
 -   ready
     -   invoked when Polymer has finished creating and initializing the element's local DOM
 
-### DONE? Declared properties
+### Declared properties
 
 -   Declared properties can be configured from markup using attributes
 -   Declared properties can optionally support change observers, two-way data binding, and reflection to attributes
@@ -424,13 +424,13 @@ Examples:
       }
     });
 
-### DONE? Local DOM
+### Local DOM
 
 -   Local DOM is the DOM created and managed by the element (ie, shady DOM + shadow DOM)
 -   Polymer uses shady DOM by default
 -   shady DOM requires you to use the [Polymer DOM API](https://www.polymer-project.org/1.0/docs/devguide/local-dom.html#dom-api)
 
-### DONE? Events
+### Events
 
 -   Attaching event listeners to the host object and local DOM children
 
@@ -452,7 +452,7 @@ Example:
       </script>
     </dom-module>
 
-### NEARLYTHERE Data binding
+### Data binding
 
 -   Data binding binds a property or sub-property of a custom element (the host element) to a property or attribute of an element in its local DOM (the child or target element)
 
@@ -469,7 +469,7 @@ Example:
         </template>
     </dom-module>
 
-### DONE? Behaviors
+### Behaviors
 
 -   Behaviors are reusable modules of code that can be mixed into Polymer elements
 -   To add a behavior to a Polymer element definition, include it in a `behaviors` array on the prototype
@@ -518,7 +518,7 @@ highlight-behavior.html:
         };
     </script>
 
-## DONE? Polymer element categories
+## Polymer element categories
 
 From the [elements guide](https://elements.polymer-project.org/guides/using-elements) and the [elements catalog](https://elements.polymer-project.org/):
 
@@ -537,7 +537,7 @@ From the [elements guide](https://elements.polymer-project.org/guides/using-elem
 -   Molecules
     -   Wrappers for third-party libraries
 
-# NEARLYTHERE Assessment
+# Assessment
 
 ## Pros
 
@@ -555,7 +555,7 @@ From the [elements guide](https://elements.polymer-project.org/guides/using-elem
 -   currently not possible to choose whatever subset of Polymer 1.0's features you want
     -   the [experimental features guide](https://www.polymer-project.org/1.0/docs/devguide/experimental.html) describes `polymer-mini.html` and `polymer-micro.html`, which are smaller subsets of `polymer.html` (subject to change in future releases)
 
-# DONE? Resources
+# Resources
 
 ## Polymer
 
