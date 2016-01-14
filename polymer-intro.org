@@ -267,7 +267,7 @@ warnings.html:
 #+END_SRC
 /(Example from [[http://www.html5rocks.com/en/tutorials/webcomponents/imports/][HTML Imports - HTML5 Rocks]])/
 
-*Scripting in imports* /(from HTML Imports - HTML5 Rocks)/
+*Scripting in imports* /(from  [[http://www.html5rocks.com/en/tutorials/webcomponents/imports/][HTML Imports - HTML5 Rocks]])/
 - an import can access its own DOM and/or the DOM of the page that's importing it
 - script in the import is executed in the context of the window that contains the importing document
 - scripts in an import are processed in order, but do not block the main document parsing

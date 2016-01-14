@@ -27,7 +27,10 @@ Source: [Software Componentization](http://blogs.windriver.com/koning/2006/09/co
 ## Polymer: opinionated approach to web components
 
 -   a lightweight sugaring layer on top of the web components APIs
--   Polymer 1.0's goal: make development using web components easier and faster by providing several kinds of ready-made custom elements and its own extensions of the existing web components
+-   Polymer 1.0's goal: make development using web components easier and faster by:
+    -   providing a library and scaffolds for making new custom elements
+    -   providing its own libraries of ready-made custom elements
+    -   providing its own extensions of the existing web components
 -   "it's a library, not a framework"
     -   emphasis on interoperability: integrating Polymer with other frameworks should be doable
 
@@ -41,7 +44,7 @@ Source: [Software Componentization](http://blogs.windriver.com/koning/2006/09/co
 
 <http://w3c.github.io/webcomponents/spec/custom/>
 
-**Custom elements** define an extension point for the HTML parser to be able to recognize a new "custom element" name and provide it with a JavaScript-backed object model automatically
+**Custom elements** "define an extension point for the HTML parser to be able to recognize a new 'custom element' name and provide it with a JavaScript-backed object model automatically" *([Bringing Componentization to the Web](https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/))*
 
 Example:
 
@@ -68,7 +71,7 @@ Example:
 
 **is attribute**
 
--   Hidden inside the Custom Elements spec is another significant feature &#x2013; the ability to indicate that a built-in element should be given a custom element name and API capabilities
+-   a native element can be given a custom element name and API capabilities
 
 Example:
 
@@ -96,6 +99,8 @@ Note:
 ### Templates
 
 <http://www.w3.org/TR/html5/scripting-1.html#the-template-element>
+
+From [Bringing Componentization to the Web](https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/):
 
 -   this early web components feature is now part of the [HTML5 recommendation](http://www.w3.org/TR/html5/)
 -   the template element introduced the concept of inertness (template's children don't trigger downloads or respond to user input, etc.) and was the first way to declaratively create a disconnected element subtree in HTML
@@ -125,6 +130,8 @@ Example:
 ### Shadow DOM
 
 <http://w3c.github.io/webcomponents/spec/shadow/>
+
+From [Bringing Componentization to the Web](https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/):
 
 -   provides an imperative API for creating a separate tree of elements that can be connected (only once) to a host element
 -   these "shadow" children replace the "real" children when rendering the document
@@ -201,6 +208,8 @@ Example:
 
 <http://w3c.github.io/webcomponents/spec/imports/>
 
+From [Bringing Componentization to the Web](https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/):
+
 -   defines a declarative syntax to "import" (request, download and parse) HTML into a document
 -   imports (using a link element's rel="import") execute the imported document's script in the context of the host page (thus having access to the same global object and state)
 -   the HTML, JavaScript, and CSS parts of a web component can be conveniently deployed using a single import
@@ -271,7 +280,7 @@ warnings.html:
 
 *(Example from [HTML Imports - HTML5 Rocks](http://www.html5rocks.com/en/tutorials/webcomponents/imports/))*
 
-**Scripting in imports**
+**Scripting in imports** *(from  [HTML Imports - HTML5 Rocks](http://www.html5rocks.com/en/tutorials/webcomponents/imports/))*
 
 -   an import can access its own DOM and/or the DOM of the page that's importing it
 -   script in the import is executed in the context of the window that contains the importing document
