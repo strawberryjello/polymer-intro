@@ -1,0 +1,18 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+     var HelloWorldPrototype = Object.create(HTMLElement.prototype);
+
+     HelloWorldPrototype.createdCallback = function() {
+       var p = document.createElement('p');
+       p.textContent = 'Hello World';
+       this.appendChild(p);
+     };
+
+     document.registerElement('hello-world', {
+       prototype: HelloWorldPrototype
+     });
+    </script>
+  </body>
+</html>
