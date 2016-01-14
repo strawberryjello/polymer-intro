@@ -20,7 +20,10 @@ Source: [[http://blogs.windriver.com/koning/2006/09/components.html][Software Co
 
 ** Polymer: opinionated approach to web components
 - a lightweight sugaring layer on top of the web components APIs
-- Polymer 1.0's goal: make development using web components easier and faster by providing several kinds of ready-made custom elements and its own extensions of the existing web components
+- Polymer 1.0's goal: make development using web components easier and faster by:
+  - providing a library and scaffolds for making new custom elements
+  - providing its own libraries of ready-made custom elements
+  - providing its own extensions of the existing web components
 - "it's a library, not a framework"
   - emphasis on interoperability: integrating Polymer with other frameworks should be doable
 
@@ -31,7 +34,7 @@ Source: [[http://blogs.windriver.com/koning/2006/09/components.html][Software Co
 *** Custom Elements
 http://w3c.github.io/webcomponents/spec/custom/
 
-*Custom elements* define an extension point for the HTML parser to be able to recognize a new "custom element" name and provide it with a JavaScript-backed object model automatically
+*Custom elements* define an extension point for the HTML parser to be able to recognize a new "custom element" name and provide it with a JavaScript-backed object model automatically /([[https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/][source]])/
 
 Example:
 #+BEGIN_SRC html
@@ -59,7 +62,7 @@ document.registerElement('my-avatar', {
 /(Example from [[https://www.youtube.com/watch?v=BG4KHxASs_A][Phil Leggetter's DevWeek presentation]])/
 
 *is attribute*
-- Hidden inside the Custom Elements spec is another significant feature -- the ability to indicate that a built-in element should be given a custom element name and API capabilities
+- a native element can be given a custom element name and API capabilities
 
 Example:
 #+BEGIN_SRC html
@@ -90,6 +93,7 @@ http://www.w3.org/TR/html5/scripting-1.html#the-template-element
 - this early web components feature is now part of the [[http://www.w3.org/TR/html5/][HTML5 recommendation]]
 - the template element introduced the concept of inertness (template's children don't trigger downloads or respond to user input, etc.) and was the first way to declaratively create a disconnected element subtree in HTML
 - templates may be used for a variety of things from template-stamping and data-binding to conveying the content of a shadow DOM
+/([[https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/][source]])/
 
 Example:
 #+BEGIN_SRC html
