@@ -34,7 +34,7 @@ Source: [[http://blogs.windriver.com/koning/2006/09/components.html][Software Co
 *** Custom Elements
 http://w3c.github.io/webcomponents/spec/custom/
 
-*Custom elements* define an extension point for the HTML parser to be able to recognize a new "custom element" name and provide it with a JavaScript-backed object model automatically /([[https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/][source]])/
+*Custom elements* "define an extension point for the HTML parser to be able to recognize a new 'custom element' name and provide it with a JavaScript-backed object model automatically" /([[https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/][Bringing Componentization to the Web]])/
 
 Example:
 #+BEGIN_SRC html
@@ -90,10 +90,10 @@ Note:
 *** Templates
 http://www.w3.org/TR/html5/scripting-1.html#the-template-element
 
+From [[https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/][Bringing Componentization to the Web]]:
 - this early web components feature is now part of the [[http://www.w3.org/TR/html5/][HTML5 recommendation]]
 - the template element introduced the concept of inertness (template's children don't trigger downloads or respond to user input, etc.) and was the first way to declaratively create a disconnected element subtree in HTML
 - templates may be used for a variety of things from template-stamping and data-binding to conveying the content of a shadow DOM
-/([[https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/][source]])/
 
 Example:
 #+BEGIN_SRC html
@@ -120,6 +120,7 @@ document.body.appendChild(clone);
 *** Shadow DOM
 http://w3c.github.io/webcomponents/spec/shadow/
 
+From [[https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/][Bringing Componentization to the Web]]:
 - provides an imperative API for creating a separate tree of elements that can be connected (only once) to a host element
 - these "shadow" children replace the "real" children when rendering the document
 
@@ -194,6 +195,7 @@ Example:
 *** HTML Imports
 http://w3c.github.io/webcomponents/spec/imports/
 
+From [[https://blogs.windows.com/msedgedev/2015/07/14/bringing-componentization-to-the-web-an-overview-of-web-components/][Bringing Componentization to the Web]]:
 - defines a declarative syntax to "import" (request, download and parse) HTML into a document
 - imports (using a link element's rel="import") execute the imported document's script in the context of the host page (thus having access to the same global object and state)
 - the HTML, JavaScript, and CSS parts of a web component can be conveniently deployed using a single import
@@ -265,7 +267,7 @@ warnings.html:
 #+END_SRC
 /(Example from [[http://www.html5rocks.com/en/tutorials/webcomponents/imports/][HTML Imports - HTML5 Rocks]])/
 
-*Scripting in imports*
+*Scripting in imports* /(from HTML Imports - HTML5 Rocks)/
 - an import can access its own DOM and/or the DOM of the page that's importing it
 - script in the import is executed in the context of the window that contains the importing document
 - scripts in an import are processed in order, but do not block the main document parsing
